@@ -1,0 +1,124 @@
+Background for the Problem:
+---------------------------
+you are given a list of rectangles defined by their top left and bottom right
+corner. your job is to look at all of these rectangles and find all the sections
+where one or more rectangles are overlapping. You need to determine how much 
+overlapping is happening and you're going to do this by keeping track of the
+total area of every "level" of overlap, where a "level of overlap" is defined 
+by the number of overlapping rectangles. so if two rectangles are overlaping then
+the area of level two overlap would be the area covered by the overlap of those
+two rectangles. In the case of N rectangles, the maximum possible level of overlap
+would be n if all n rectangles are overlapping.
+
+    - defining overlap: a 1x1 rectangle is defined as (x, y, x, y), so if you have
+    two rectangles (0, 0, 0, 0) and (0, 0, 1, 1) you have two levels of overlap,
+    2 & 1
+        - grid:
+            21
+            11
+    - defining area:
+        in general area( x1,y1,x2,y2 ) = (x2-x1+1)*(y2-y1+1)
+
+As I said your job is to keep track of the total area for every level of overlap.
+When your algorithm is done, the function should return a map where each key is
+the level of overlap and each value is the sum total area of overlap at that level
+between all given rectangles- that value, that big sum- modulo 7001. "for overflow"
+reasons, but also, for fun :].
+
+Notes:
+    - Area: in general area( x1,y1,x2,y2 ) = (x2-x1+1)*(y2-y1+1)
+    - Overlap: a 1x1 rectangle is defined as (x, y, x, y)
+    - All rectangles will live on a "grid of pixels" so there is a minimum possible 
+    xy and a maximum possible xy.
+
+
+Algorithms:
+-----------
+    Naive Brute Force:
+    ------------------
+    Setup:
+        - Create a 2d array that represents your grid, and an array of length n+1 where n is
+        the number of rectangles you've created to store the total overlap area.
+
+    Loop:
+        - For each rectangle, add 1 to all cells in the grid covered by this rectangle.
+        - Once complete, loop over the entire grid, and for every cell add 1 to your
+        overlap area array at the index equal to the value of the cell you're checking.
+        this will result in that array holding the area for each level of overlap
+
+    Notes:
+        - For this assignment, you'd have to modulo the areas by 7001 as you went to keep the
+        values as expected
+        - This algorithm is very sub optimal and does a lot of extra checking.
+        - O(N^2) at least, even for the step of marking the grid. Not good.
+
+
+    That brute force algorithm is bad in part because it requires us to look at every cell of
+    our grid. so if that grid was a square with sides 10^9 long, we now have to look at 10^18
+    squares which is awful.
+    Instead what we can do is just look at each rectangle which will cut out a lot of needless
+    work. 
+
+
+    Sweeping Line (Scan):
+    ---------------------
+    Setup:
+        - Create an array the length of one edge of the underlying grid. This is our scan line.
+        - Create a container full of rectangle start and end events (this will become an event
+        queue once it is sorted)
+            - Every edge of a rectangle (vertical or horizontal, same as scan line) is an event.
+            That event is either the start of a rectangle or the end of a rectangle.
+
+            struct Event:
+                type:int +-1    (start event or end event)
+                start:int       (bounds of this edge)
+                end:int
+                position:int    (x/y cord of this event to see how far since the last event)
+        
+        - Sort the event queue.
+                
+    Loop:
+        - begin with a scan line of all zeros and a line position = 0 (the edge of the grid)
+        - while there is a next event:
+            - add the area the scan line just covered to the running totals:
+                - ex: [0,1,2,1], last position 0, next event position 3,
+                    for each entry in the scan line, add distance traveled (3-0) to overlap
+                    level. so overlap 0 gets + (3-0), overlap 1 gets it, then 2, then 1 again. 
+            - update the scan line:
+                the scan line at any point tells you the level of overlap at all grid cells
+                for that row/col of the grid. (This level of overlap wont chang until the next
+                event.)
+                when a new rectangle starts:
+                    - increment the values in the scan line that are now covered by this new
+                    rectangle.
+                when a rectangle ends:
+                    - decrement the values in the scan line that are no longer covered by 
+                    this rectangle.
+    
+    Notes:
+        - Volper's Line struct can be used as an event.
+
+
+Other Assignment Notes:
+-----------------------
+Input Formatting:
+    grid_size (the grid is a square, so this is one number n and the grid is nxn)
+    num_rectangles
+    rectangle_info
+    ...
+
+    Examples:
+        in1:
+            14
+            4
+            0 0 10 10
+            1 1 11 11
+            2 2 12 12 
+            3 3 13 13 
+        
+        in0:
+            5
+            2
+            1 2 4 4 
+            1 3 3 3
+

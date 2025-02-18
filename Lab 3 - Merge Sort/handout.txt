@@ -1,0 +1,4 @@
+Implement merge-sort as discussed in class.
+
+Submit:
+mergesort.cpp

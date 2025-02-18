@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="OAHashTable" targetName="OAHashTable" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0e4f41c6-8ff6-440f-bb49-86224134aba0" name="Changes" comment="Fixed infinite loop, over by 2 probes" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;suncrest45&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="bf9e346f-0a9e-44ef-be51-e049a76276fb" />
+        <option name="url" value="https://github.com/suncrest45/OAHashTable.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="3.4" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2eQ8eBbMRt1phM96CsNK9l7vjsA" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/PersonalSVN/Spring 2024/CS280/OAHashTable/output4.txt",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.splitter.proportion": "0.18789263",
+    "two.files.diff.last.used.file": "C:/PersonalSVN/Spring 2024/CS280/OAHashTable/output4.txt",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="OAHashTable" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OAHashTable" TARGET_NAME="OAHashTable" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OAHashTable" RUN_TARGET_NAME="OAHashTable">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e4f41c6-8ff6-440f-bb49-86224134aba0" name="Changes" comment="" />
+      <created>1711825534028</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711825534028</updated>
+      <workItem from="1711825536096" duration="16419000" />
+      <workItem from="1711905936496" duration="10571000" />
+      <workItem from="1712199946146" duration="44000" />
+      <workItem from="1712200141009" duration="12982000" />
+      <workItem from="1712514599253" duration="1936000" />
+      <workItem from="1712518276030" duration="380000" />
+      <workItem from="1712518774751" duration="1414000" />
+      <workItem from="1712537519735" duration="704000" />
+      <workItem from="1712635317139" duration="9000" />
+      <workItem from="1712644650446" duration="1465000" />
+    </task>
+    <task id="LOCAL-00001" summary="Commenting">
+      <option name="closed" value="true" />
+      <created>1711832145629</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711832145629</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commenting">
+      <option name="closed" value="true" />
+      <created>1711832180205</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711832180205</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Inserting">
+      <option name="closed" value="true" />
+      <created>1711939670363</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711939670363</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Updating ignore list">
+      <option name="closed" value="true" />
+      <created>1712200193892</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712200193892</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Remove">
+      <option name="closed" value="true" />
+      <created>1712220394872</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712220394872</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Successfully built">
+      <option name="closed" value="true" />
+      <created>1712518113400</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712518113400</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changed file names">
+      <option name="closed" value="true" />
+      <created>1712518301563</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712518301563</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Changed file names again">
+      <option name="closed" value="true" />
+      <created>1712519351419</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712519351419</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Bugged probing">
+      <option name="closed" value="true" />
+      <created>1712562937536</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712562937536</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fixed infinite loop, over by 2 probes">
+      <option name="closed" value="true" />
+      <created>1712645524297</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712645524297</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Commenting" />
+    <MESSAGE value="Inserting" />
+    <MESSAGE value="Updating ignore list" />
+    <MESSAGE value="Remove" />
+    <MESSAGE value="Successfully built" />
+    <MESSAGE value="Changed file names" />
+    <MESSAGE value="Changed file names again" />
+    <MESSAGE value="Bugged probing" />
+    <MESSAGE value="Fixed infinite loop, over by 2 probes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed infinite loop, over by 2 probes" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

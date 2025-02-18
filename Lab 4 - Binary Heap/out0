@@ -1,0 +1,20 @@
+Empty heap: 
+9 
+5 9 
+3 9 5 
+3 7 5 9 
+3 4 5 9 7 
+2 4 3 9 7 5 
+1 4 2 9 7 3 
+top=1 heap: 1 4 2 9 7 3 
+after pop heap: 2 4 3 9 7 
+top=2 heap: 2 4 3 9 7 
+after pop heap: 3 4 7 9 
+top=3 heap: 3 4 7 9 
+after pop heap: 4 9 7 
+top=4 heap: 4 9 7 
+after pop heap: 7 9 
+top=7 heap: 7 9 
+after pop heap: 9 
+top=9 heap: 9 
+after pop heap: 

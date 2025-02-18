@@ -1,0 +1,15 @@
+particale 0: position -3 mass 1 speed 1
+particale 1: position 0 mass 2 speed 0.5
+particale 2: position 2 mass 3 speed -2
+	new event at 6 collision 0 and 1
+	new event at 0.8 collision 1 and 2
+At time 0.8 collision 1 and 2 is processed: 0.4 0.4
+	new event at 2.53333 collision 0 and 1
+particale 0: position -2.2 mass 1 speed 1
+particale 1: position 0.4 mass 2 speed -0.5
+particale 2: position 0.4 mass 3 speed 2
+At time 2.53333 collision 0 and 1 is processed: -0.466667 -0.466667
+particale 0: position -0.466667 mass 1 speed -1
+particale 1: position -0.466667 mass 2 speed 0.5
+particale 2: position 3.86667 mass 3 speed 2
+At time 6 collision 0 and 1 is cancelled: -3.93333 1.26667

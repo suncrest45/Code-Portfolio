@@ -1,0 +1,137 @@
+//============================================================================
+// @Author: Gary Yang
+// @Date: 4/22/2024
+// @Description: Implemented a water flow simulation using a priority queue
+//              to calculate the total amount of water retained in a 2D grid.
+// @copywrite: DigiPen(c) 2024
+// @compile: g++ -std=c++13 -o -werror -wextra water water.cpp
+//============================================================================
+
+
+//----| Includes |------------------------------------------------------------
+#include "water.h"
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <queue>
+#include <climits>
+#include <algorithm>
+
+
+
+//----| Structs |-------------------------------------------------------------
+
+//! @brief container that holds the water with a 2D space position
+struct Cell {
+    int height; // height of the cell
+    int pos[2]; // position of the cell (x and y)
+
+    bool operator<(const Cell& c) const { // overload operator, allows for comparison
+        return height > c.height;
+    }
+};
+
+
+//----| Functions |-----------------------------------------------------------
+
+//! @brief helper function that will read in the file and return the data structure
+//!        required for the waterret method
+//! @param filename the file to read in
+//! @param row the number of rows in the file to be passed back to the caller
+//! @param col the number of columns in the file to be passed back to the caller
+std::vector<std::vector<int>> readfile(const char* filename, int& row, int& col) {
+    std::ifstream file(filename); // open file
+    if (!file.is_open()) { // check if file is open
+        std::cerr << "ifstream fileopen failure\n"; // error message
+        exit(-1); // exit program
+    }
+
+    file >> row >> col; // read in row and col detentions from file
+
+    // create a 2D vector to store the heights
+    std::vector<std::vector<int>> heights(row, std::vector<int>(col));
+    for (int i = 0; i < row; ++i) { // loop through the rows
+        for (int j = 0; j < col; ++j) { // loop through the columns
+            file >> heights[i][j]; // read in the heights from the file
+        }
+    }
+    file.close(); // close the file
+
+    return heights; // return the 2D vector
+}
+
+
+
+//! @brief the waterret method which will calculate how much water is held
+long int waterret(const char* filename) {
+    using namespace std;
+
+    int rows;   // rows and columns
+    int cols;
+
+    // read in the file and store the 2D vector
+    auto heights = readfile(filename, rows, cols);
+
+    // create a 2D vector to store the water
+    vector<vector<int>> water(rows, std::vector<int>(cols, 0));
+
+    // create a 2D vector to store the cutoffs (where water will stop)
+    vector<vector<int>> cutoff(rows, std::vector<int>(cols, INT_MAX));
+
+    // create a priority queue
+    priority_queue<Cell, vector<Cell>> priorityQueue;
+
+    // add all perimeter cells to the priority queue
+    for (int i = 0; i < rows; i++) {        // loop through the rows
+        for (int j = 0; j < cols; j++) {    // loop through the columns
+            if (i == 0 || j == 0 || i == rows - 1 || j == cols - 1) { // check if the cell is a perimeter cell
+                priorityQueue.push({heights[i][j], {i, j}});          // add the cell to the priority queue
+                cutoff[i][j] = heights[i][j];                         // set the cutoff to the height of the cell
+            }
+        }
+    }
+
+    // create a 2D array to store the directions
+    vector<pair<int, int>> directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+
+    // tick through the simulation
+    while (!priorityQueue.empty()) {
+        Cell cell = priorityQueue.top(); // get the top cell
+        priorityQueue.pop();             // remove the top cell
+        int currHeight = cell.height;    // get the height of the cell
+        int x = cell.pos[0];             // get the x position of the cell
+        int y = cell.pos[1];             // get the y position of the cell
+
+        // loop through the directions
+        for (auto& item : directions) {
+            int newX = x + item.first; // new x position
+            int newY = y + item.second; // new y position
+            if (newX >= 0 && newX < rows && newY >= 0 && newY < cols) { // bounds check
+                int new_height = max(currHeight, heights[newX][newY]); // calculate the new height
+                if (new_height < cutoff[newX][newY]) { // check if updating is necessary
+                    cutoff[newX][newY] = new_height; // update the cutoff
+                    priorityQueue.push({new_height, {newX, newY}}); // add the new cell to the queue
+
+                    // Calculate trapped water if any
+                    if (cutoff[newX][newY] > heights[newX][newY]) {
+                        water[newX][newY] = cutoff[newX][newY] - heights[newX][newY];
+                    }
+                }
+            }
+        }
+    }
+
+    // look through the cutoffs and calculate the water
+    long int waterLeft = 0;
+    for (int i = 0; i < rows; i++) {     // loop through the rows
+        for (int j = 0; j < cols; j++) { // loop through the columns
+            waterLeft += water[i][j];       // add the water to the total
+        }
+    }
+
+    return waterLeft; // return the water left
+}
+
+
+
+

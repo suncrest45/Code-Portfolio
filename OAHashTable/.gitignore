@@ -1,0 +1,83 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+/cmake-build-debug/build.ninja
+/cmake-build-debug/.cmake/api/v1/query/cache-v2
+/cmake-build-debug/.cmake/api/v1/reply/cache-v2-119ac11798e4c4fb36cc.json
+/cmake-build-debug/CMakeFiles/clion-Debug-log.txt
+/cmake-build-debug/CMakeFiles/clion-environment.txt
+/cmake-build-debug/CMakeFiles/cmake.check_cache
+/cmake-build-debug/cmake_install.cmake
+/cmake-build-debug/CMakeCache.txt
+/cmake-build-debug/CMakeFiles/3.27.8/CMakeCCompiler.cmake
+/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c
+/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml
+/cmake-build-debug/CMakeFiles/3.27.8/CMakeCXXCompiler.cmake
+/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/CMakeCXXCompilerId.cpp
+/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin
+/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin
+/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1
+/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-029c2e2f0823b8229e9d.json
+/cmake-build-debug/CMakeFiles/3.27.8/CMakeRCCompiler.cmake
+/cmake-build-debug/CMakeFiles/3.27.8/CMakeSystem.cmake
+/cmake-build-debug/.cmake/api/v1/query/codemodel-v2
+/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-5950ee6ce0c6a817d11e.json
+/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json
+/cmake-build-debug/.cmake/api/v1/reply/index-2024-03-31T17-25-37-0168.json
+/cmake-build-debug/Testing/Temporary/LastTest.log
+/cmake-build-debug/CMakeFiles/rules.ninja
+/cmake-build-debug/.cmake/api/v1/reply/target-OAHashTable-Debug-5751ba217e32c65a12aa.json
+/cmake-build-debug/CMakeFiles/TargetDirectories.txt
+/cmake-build-debug/.cmake/api/v1/query/toolchains-v1
+/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-ad96a6fe670fcae04030.json
+/cmake-build-debug/CMakeFiles/OAHashTable.dir/build.make
+/cmake-build-debug/.cmake/api/v1/reply/cache-v2-1a4669d4f1e7d09d7dc7.json
+/cmake-build-debug/CMakeFiles/OAHashTable.dir/cmake_clean.cmake
+/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake
+/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-54a3c7547aeb7723e05d.json
+/cmake-build-debug/CMakeFiles/OAHashTable.dir/compiler_depend.make
+/cmake-build-debug/CMakeFiles/OAHashTable.dir/compiler_depend.ts
+/cmake-build-debug/CMakeFiles/OAHashTable.dir/depend.make
+/cmake-build-debug/CMakeFiles/OAHashTable.dir/DependInfo.cmake
+/cmake-build-debug/CMakeFiles/OAHashTable.dir/flags.make
+/cmake-build-debug/CMakeFiles/OAHashTable.dir/includes_CXX.rsp
+/cmake-build-debug/.cmake/api/v1/reply/index-2024-04-01T23-48-33-0712.json
+/cmake-build-debug/CMakeFiles/OAHashTable.dir/link.txt
+/cmake-build-debug/CMakeFiles/OAHashTable.dir/linkLibs.rsp
+/cmake-build-debug/Makefile
+/cmake-build-debug/CMakeFiles/Makefile.cmake
+/cmake-build-debug/CMakeFiles/Makefile2
+/cmake-build-debug/OAHashTable.cbp
+/cmake-build-debug/CMakeFiles/OAHashTable.dir/objects1.rsp
+/cmake-build-debug/CMakeFiles/OAHashTable.dir/progress.make
+/cmake-build-debug/CMakeFiles/progress.marks
+/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-27b2800b817d93afcfcd.json
