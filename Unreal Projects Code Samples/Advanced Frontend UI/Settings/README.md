@@ -7,4 +7,4 @@
 ### GameUserSettings    - Handles reading and writing settings to an from a config file
 ### OptionsDataRegistry - The factory that creates and initialises each setting 
 ### ListDataObject      - The actual data of the setting, this stores its default value, different values the setting has (low, medium, high, ultra), notifies the framework when the setting has been changed (by condition, by user, or being reset), display name, etc
-### The visual          - The visual representation of each setting
+### Widget_EntryList    - The visual representation of each setting
