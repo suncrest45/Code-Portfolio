@@ -11,7 +11,10 @@ GameMenu (Character Screen, Inventory, Skill Tree, Pause Menu, etc.) <br>
 Modal (Confirmation of Destructive Action, Warnings, Pop-Ups, etc.) - highest input priority<br>
 Widgets are pushed on and popped from these different stacks in addition to dictating input priority they also keep track of which widget you came from</p>
 
-### Asynchronous Widget Creation - Process
+### Asynchronous Widget Creation - Process (FrontendDeveloperSettings, FrontendFunctionLibrary, FrontendUISubsystem, AsyncActions)
+<p>The developer settings save a map of GameplayTags and Soft Widget Pointers to a config file <br>
+The FunctionLibrary uses the tags as keys to find the soft widget pointer <br>
+The AsynActions serve as an interface to call FrontendUISubsystem to load in the widgets and push them to the screen</p>
 
 
 ### Loading 
