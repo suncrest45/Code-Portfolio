@@ -1,2 +1,2 @@
 # Code-Portfolio
-All the C++/C# Projects I have worked on
+All the C++ Projects I have worked on
